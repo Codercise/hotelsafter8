@@ -1,0 +1,19 @@
+defaults: &defaults
+  site_name: New site
+  legal_name: Michael Dawson Enterprises Pty Ltd
+  contact_email: email.michaeldawson@gmail.com
+  admin_email: email.michaeldawson@gmail.com
+  contact_phone: 0435 129 029
+  business_address: Lvl 2, 14 Grenfell St, Adelaide SA 5000
+  website: www.michaeldawsonenterprises.com
+  facebook_url: http://www.facebook.com/monsieurdawson
+  twitter_url: https://twitter.com/michaelpdawson
+
+development:
+  <<: *defaults
+
+test:
+  <<: *defaults
+
+production:
+  <<: *defaults
