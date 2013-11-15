@@ -3,3 +3,7 @@
 
 en:
   hello: "Hello world"
+  active_admin: 
+    dashboard_welcome:
+      welcome: "Another great app made by Brandy Content"
+      call_to_action: "If you have any questions, contact michael@brandycontent.com || 0435129029"
