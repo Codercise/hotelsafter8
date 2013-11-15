@@ -1,7 +1,7 @@
 APP = {
   common: {
     init: function() {
-      
+      // This is executed on every page
     }
   },
 };

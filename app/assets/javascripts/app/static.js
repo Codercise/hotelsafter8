@@ -1,4 +1,3 @@
-
 APP.static = {
 	init: function() {
 	  // controller-wide code
@@ -6,7 +5,6 @@ APP.static = {
 	},
 
 	index: function() {
-		alert('test');
-	}
 
+	}
 }
