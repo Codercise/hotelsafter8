@@ -6,7 +6,7 @@ APP.static = {
 	},
 
 	index: function() {
-
+		alert('test');
 	}
 
 }

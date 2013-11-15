@@ -12,5 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require ./app/setup
 //= require_tree ./lib
 //= require_tree ./app
