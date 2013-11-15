@@ -5,28 +5,16 @@ gem 'rails', '4.0.0'
 gem 'devise'
 gem 'simple_form'
 gem 'settingslogic'
-gem 'activeadmin',         github: 'gregbell/active_admin', branch: 'rails4'
-
-
-#tues 11:40 seeing dr potter/podder repat clinic daws rd
-#
-
-
+gem 'activeadmin',         github: 'gregbell/active_admin'
+gem 'paperclip'
+gem 'aws-sdk'
+gem 'twitter'
+gem 'simple_form'
 gem 'unicorn'
-
-# Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
-
-# Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
-
-# Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '~> 4.0.0'
-
-# Use jquery as the JavaScript library
 gem 'jquery-rails'
-
-# Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
@@ -45,24 +33,13 @@ group :development, :test do
 	gem 'rspec-rails'
 	gem 'factory_girl_rails'
 	gem 'faker'
+	gem 'capybara'
+	gem 'selenium-webdriver'
 end
 
 group :production do
 	gem 'pg'
+	gem 'rails_12factor'
 end
 
-
-# To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
-
-# To use Jbuilder templates for JSON
-# gem 'jbuilder'
-
-# Use unicorn as the app server
-# gem 'unicorn'
-
-# Deploy with Capistrano
-# gem 'capistrano'
-
-# To use debugger
-# gem 'debugger'
+gem 'simplecov', :require => false, :group => :test
