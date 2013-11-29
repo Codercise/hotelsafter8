@@ -5,7 +5,7 @@ ActiveAdmin.setup do |config|
   # Set the title that is displayed on the main layout
   # for each of the active admin pages.
   #
-  config.site_title = "Brandy Content Template App"
+  config.site_title = "Hotels after 8"
 
   # Set the link url for the title. For example, to take
   # users to your main site. Defaults to no link.
@@ -66,7 +66,7 @@ ActiveAdmin.setup do |config|
   # This setting changes the method which Active Admin calls
   # to return the currently logged in user.
   config.current_user_method = :current_admin_user
-
+  config.show_comments_in_menu = false
 
   # == Logging Out
   #
