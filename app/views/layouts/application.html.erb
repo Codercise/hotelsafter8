@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Hotels After 8</title>
+		<%= stylesheet_link_tag    "application", :media => "all" %>
+		<%= javascript_include_tag "application" %>
+		<%= csrf_meta_tags %>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+    
+<!--     <link href="http://clapat.ro/themes/newave/css/bootstrap.min.css" rel="stylesheet" />     -->
+    <link href="http://clapat.ro/themes/newave/style.css" rel="stylesheet" />
+
+	<link rel="alternate stylesheet" type="text/css" href="http://clapat.ro/themes/newave/css/colors/color-gray.css" title="gray">
+    <link rel="alternate stylesheet" type="text/css" href="http://clapat.ro/themes/newave/css/colors/color-green.css" title="green">
+    <link rel="alternate stylesheet" type="text/css" href="http://clapat.ro/themes/newave/css/colors/color-red.css" title="red">
+    <link rel="alternate stylesheet" type="text/css" href="http://clapat.ro/themes/newave/css/colors/color-blue.css" title="blue">
+    <link rel="alternate stylesheet" type="text/css" href="http://clapat.ro/themes/newave/css/colors/color-yellow.css" title="yellow">
+    
+    
+    <link rel="stylesheet" href="http://clapat.ro/themes/newave/css/prettyPhoto.css" type="text/css" media="screen" />    
+	<link href="http://clapat.ro/themes/newave/css/jquery.bxslider.css" rel="stylesheet" />
+    <link href="http://clapat.ro/themes/newave/css/font-awesome.min.css" rel="stylesheet" />
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css' />    
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+
+
+
+    
+	</head>
+	<body data-action=<%= action_name %>, data-controller=<%=controller_name %> >
+	<%= yield %>
+	</body>
+</html>
