@@ -2,6 +2,8 @@ class Hotel < ActiveRecord::Base
 	has_many :rooms
 	accepts_nested_attributes_for :rooms
 
+	has_attached_file :master_image
+
 	geocoded_by :full_address
 	after_create :geocode
 
