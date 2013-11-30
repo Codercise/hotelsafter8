@@ -19,7 +19,14 @@ class ApplicationController < ActionController::Base
             else
             	session[:location] = Location.find_or_create_by_city_and_state(:city=>"Adelaide", :state=>"South Australia").id
             end
+        else
+            begin
+                Location.find(session[:location])
+            rescue Exception => e
+                Location.find_or_create_by_city_and_state(:city=>"Adelaide", :state=>"South Australia").id
+            end 
         end
+
     end
 
     def request_location
@@ -28,5 +35,7 @@ class ApplicationController < ActionController::Base
 		else
 			Location.last
 		end
+
+
 	end
 end

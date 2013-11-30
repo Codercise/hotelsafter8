@@ -1,6 +1,30 @@
 ActiveAdmin.register Hotel do
 
-  
+  show do
+    attributes_table do
+      row :name
+      row :full_address
+      row :image do
+        image_tag(hotel.master_image.url)
+      end
+    end
+
+    table_for hotel.rooms.order('hotel_price DESC') do
+      column "Rooms" do |room|
+        room.beds
+      end
+      column "Description" do |room|
+        room.description
+      end
+      column "Hotel Price" do |room|
+        room.hotel_price
+      end
+      column "Our Price" do |room|
+        room.our_price
+      end      
+    end
+    active_admin_comments
+  end
 
   
   form do |f|
@@ -8,6 +32,7 @@ ActiveAdmin.register Hotel do
       f.input :name
       f.input :street, label: "Street address"
       f.input :city
+      f.input :master_image
       f.input :contact_name
       f.input :contact_number
       f.input :contact_email
