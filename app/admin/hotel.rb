@@ -29,10 +29,10 @@ ActiveAdmin.register Hotel do
   #   params.permit(:hotel=>[:name, :street, :city, :contact_email, :contact_number, :contact_name, rooms_attributes: []])
   # end
 
-  controller do
-    def resource_params
-    return [] if request.get?
-    [ params[active_admin_config.resource_class.name.underscore.to_sym].permit! ]
-    end
-  end
+  # controller do
+  #   def resource_params
+  #   return [] if request.get?
+  #   [ params[active_admin_config.resource_class.name.underscore.to_sym].permit! ]
+  #   end
+  # end
 end

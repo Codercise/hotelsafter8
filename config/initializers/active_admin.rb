@@ -7,6 +7,9 @@ ActiveAdmin.setup do |config|
   #
   config.site_title = "Hotels after 8"
 
+  config.before_filter do
+    params.permit!
+  end
   # Set the link url for the title. For example, to take
   # users to your main site. Defaults to no link.
   #
