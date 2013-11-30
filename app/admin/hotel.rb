@@ -14,4 +14,23 @@ ActiveAdmin.register Hotel do
   #  permitted
   # end
   
+  form do |f|
+      f.inputs "Details" do
+        f.input :name
+        f.input :street
+        f.input :city
+        f.input :contact_name
+        f.input :contact_number
+        f.input :contact_email
+      end
+
+      f.inputs "Rooms" do
+        f.has_many :rooms do |ff|
+          ff.input :description
+          ff.input :beds, label: "How many beds?"
+          ff.input :image
+        end
+      end
+      f.actions
+  end
 end
