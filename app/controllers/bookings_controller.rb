@@ -6,6 +6,7 @@ class BookingsController < ApplicationController
   def create
     @booking = Booking.new(booking_params)
     if @booking.save
+      BookingMailer.send_booking_to_staff(@booking)
       redirect_to '/booking/success'
     else
       render 'new'
