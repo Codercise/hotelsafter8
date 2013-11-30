@@ -1,0 +1,18 @@
+<h1>Book your hotel room</h1>
+<div class="booking-form">
+  <%= form_for @booking do |f| %>
+    <%= f.label "Room ID: " %>
+    <%= f.text_field :room_id, value: "1", disabled: true %>
+
+    <%= f.label "Your name" %>
+    <%= f.text_field :customer_name %>
+
+    <%= f.label "Your phone number" %>
+    <%= f.text_field :customer_phonenumber %>
+
+    <%= f.label "Booking date" %>
+    <%= f.text_field :booking_date, disabled: true, value: DateTime.now.strftime('%d/%m/%Y') %>
+    <br />
+    <%= f.button "Make your booking", type: "submit", class: "btn btn-success" %>
+  <% end %>
+</div>

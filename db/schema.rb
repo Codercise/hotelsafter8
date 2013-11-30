@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131130002600) do
+ActiveRecord::Schema.define(version: 20131130022933) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -60,10 +60,10 @@ ActiveRecord::Schema.define(version: 20131130002600) do
   add_index "admin_users", ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
 
   create_table "bookings", force: true do |t|
-    t.integer  "vacancy_id"
-    t.integer  "user_id"
-    t.string   "paypal_track_id"
-    t.float    "amount_paid"
+    t.string   "room_id"
+    t.string   "customer_name"
+    t.string   "customer_phonenumber"
+    t.string   "booking_date"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -98,7 +98,7 @@ ActiveRecord::Schema.define(version: 20131130002600) do
   create_table "rooms", force: true do |t|
     t.integer  "hotel_id"
     t.string   "description"
-    t.string   "beds"
+    t.integer  "beds"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "image_file_name"
@@ -142,5 +142,13 @@ ActiveRecord::Schema.define(version: 20131130002600) do
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+
+  create_table "vacancies", force: true do |t|
+    t.integer  "room_id"
+    t.date     "date"
+    t.integer  "price"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end
