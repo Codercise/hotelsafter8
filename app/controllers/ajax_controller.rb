@@ -1,5 +1,6 @@
 class AjaxController < ApplicationController
   def rooms
-  	render text: "Test"
+  	@rooms = Room.all
+  	render file: '/ajax/room', layout: false#, collection: rooms
   end
 end
