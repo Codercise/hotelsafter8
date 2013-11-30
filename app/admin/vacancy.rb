@@ -1,4 +1,4 @@
-ActiveAdmin.register Room do
+ActiveAdmin.register Vacancy do
 
   
   # See permitted parameters documentation:
