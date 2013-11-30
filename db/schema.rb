@@ -98,13 +98,15 @@ ActiveRecord::Schema.define(version: 20131130002600) do
   create_table "rooms", force: true do |t|
     t.integer  "hotel_id"
     t.string   "description"
-    t.integer  "beds"
+    t.string   "beds"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "image_file_name"
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+    t.integer  "hotel_price"
+    t.integer  "our_price"
   end
 
   create_table "site_configurations", force: true do |t|
@@ -140,15 +142,5 @@ ActiveRecord::Schema.define(version: 20131130002600) do
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
-
-  create_table "vacancies", force: true do |t|
-    t.integer  "room_id"
-    t.date     "date"
-    t.integer  "price"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "hotel_price"
-    t.integer  "our_price"
-  end
 
 end
