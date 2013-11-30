@@ -26,6 +26,12 @@ ActiveAdmin.register Hotel do
     active_admin_comments
   end
 
+  index do
+    column :name
+    column :full_address
+    default_actions
+  end
+
   
   form do |f|
     f.inputs "Details" do
